@@ -36,15 +36,6 @@ class Application
       else
         resp.write "Path Not Found"
     end
-
-    # @@items.each do |item|
-    #   @@cart << item
-    #   resp.write "added #{item}\n"
-    # end
-
-    # if @@items.length == 0
-    #   resp.write "We don't have that item"
-
     resp.finish
   end
 

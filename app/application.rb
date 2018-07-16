@@ -24,9 +24,7 @@ class Application
             end
           end
       elsif req.path.match(/add/)
-
         food_item = req.params["item"]
-
         if @@items.include?(food_item)
           @@cart << food_item
           resp.write "added #{food_item}\n"
@@ -35,9 +33,9 @@ class Application
         end
       else
         resp.write "Path Not Found"
+      end
+      resp.finish
     end
-    resp.finish
-  end
 
   def handle_search(search_term)
     if @@items.include?(search_term)
